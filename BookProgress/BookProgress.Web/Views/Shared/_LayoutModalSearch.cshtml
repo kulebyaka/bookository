@@ -1,0 +1,32 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutModal.cshtml";
+}
+
+@using (Html.BtPanel("yellow"))
+{
+    using (Html.BeginForm("SearchList", "Contact", FormMethod.Get))
+    {
+        <div id="search-form">
+            <div class="col search-labels">
+                @Html.Label("Search")
+            </div>
+
+            <div class="col search">
+                @Html.TextBox("Search", "", new { @class = "form-control search-field" })
+            </div>
+
+            <div class="col buttons">
+                @Html.BtButton("Search", ButtonType.Default, "searchModalButton", false, new { @class = "apply-filter-trigger" })
+            </div>
+
+            @*@RenderSection("searchFilters")*@
+
+        </div>
+    }
+}
+
+@section title {
+    @RenderSection("title")
+}
+
+@RenderBody()

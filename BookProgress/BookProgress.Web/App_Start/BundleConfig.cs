@@ -17,11 +17,17 @@ namespace BookProgress.Web
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.unobtrusive*",
                         "~/Scripts/jquery.validate*"));
-
+            
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
             // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
+            bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
+                      "~/Static/js/bootstrap.js",
+                      "~/Static/js/respond.js",
+                      "~/Static/js/bootstrap-datetimepicker.min.js"));
+            bundles.Add(new ScriptBundle("~/bundles/custom").Include(
+                      "~/Static/js/common.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/site.css"));
 
@@ -38,6 +44,8 @@ namespace BookProgress.Web
                         "~/Content/themes/base/jquery.ui.datepicker.css",
                         "~/Content/themes/base/jquery.ui.progressbar.css",
                         "~/Content/themes/base/jquery.ui.theme.css"));
+            
         }
+
     }
 }

@@ -1,0 +1,20 @@
+﻿@{
+    Layout = null;
+}
+
+@using (ViewBag.WrapingSubform())
+{
+    <div class="section-separator">
+        <span class="section-title">
+            @RenderSection("title")
+        </span>
+        @if (IsSectionDefined("buttons"))
+        { 
+            <div class="section-buttons">
+                @RenderSection("buttons")
+            </div>
+        }
+    </div>
+    <div class="section-body">@RenderBody()</div>
+}
+

@@ -1,0 +1,24 @@
+﻿<div class="modal" id="modal-container" tabindex="-1" role="dialog">
+    <div class="modal-dialog vertical-align-center modal-@(ViewBag.ModalType ?? "default")" style="width: @(ViewBag.ModalWidth ?? "600")px;">
+        <div class="modal-content">
+            @if (IsSectionDefined("title"))
+            { 
+                <div class="modal-header">
+                    <button type="button" class="close" @*data-dismiss="modal"*@ aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    @RenderSection("title")
+                </div>
+            }
+            <div class="modal-body">
+                @RenderBody()
+            </div>
+            @if (IsSectionDefined("buttons"))
+            {
+                <div class="modal-footer">
+                    @RenderSection("buttons")
+                </div>
+            }
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>

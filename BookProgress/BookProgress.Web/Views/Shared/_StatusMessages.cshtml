@@ -1,0 +1,28 @@
+﻿
+@if (HttpContext.Current.Session["statusMessages"] != null)
+{
+    <div class="bb-alerts">
+        @foreach (var message in (IEnumerable<>)HttpContext.Current.Session["statusMessages"])
+        {
+            var contextualClass = "success";
+            if (message.Status == ResponseHeaderMessageStatus.Error)
+            {
+                contextualClass = "danger";
+            }
+            if (message.Status == ResponseHeaderMessageStatus.Warning || message.Status == ResponseHeaderMessageStatus.WarningWithOverrule)
+            {
+                contextualClass = "warning";
+            }
+            <div class="alert alert-@contextualClass alert-dismissible" role="alert">
+                <strong>@(message.Status):</strong> @message.Message
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        }
+
+        @{
+        HttpContext.Current.Session["statusMessages"] = null; //reset list of messages for future requests
+        }
+    </div>
+}

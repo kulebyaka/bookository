@@ -1,0 +1,28 @@
+﻿<div class="popover-content">
+
+    <div class="popover-title">
+
+        <button type="button" class="close" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+
+        @RenderSection("title")
+
+    </div>
+
+    @using (Html.BeginForm((object)null))
+    {
+        <div class="popover-body" style="width: 650px">
+            @RenderBody()
+        </div>
+
+        if (IsSectionDefined("buttons"))
+        {
+            <div class="popover-footer">
+                @RenderSection("buttons")
+            </div>
+        }
+    }
+
+</div>
+
