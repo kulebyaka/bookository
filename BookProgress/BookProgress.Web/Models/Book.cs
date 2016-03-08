@@ -19,11 +19,7 @@ namespace BookProgress.Web.Models
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:P2}")]
         [Range(0, 100)]
         public decimal Percentage;
-        public List<Tag> Tags;
-    }
-
-    public class Tag
-    {
+        public List<string> Tags;
     }
 
     public enum Status
