@@ -230,60 +230,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Static\css\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
-    <Content Include="Static\css\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
-    <Content Include="Static\css\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
-    <Content Include="Static\css\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
-    <Content Include="Static\css\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
-    <Content Include="Static\css\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
-    <Content Include="Static\css\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
-    <Content Include="Static\css\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
-    <Content Include="Static\css\themes\base\images\ui-icons_222222_256x240.png" />
-    <Content Include="Static\css\themes\base\images\ui-icons_2e83ff_256x240.png" />
-    <Content Include="Static\css\themes\base\images\ui-icons_454545_256x240.png" />
-    <Content Include="Static\css\themes\base\images\ui-icons_888888_256x240.png" />
-    <Content Include="Static\css\themes\base\images\ui-icons_cd0a0a_256x240.png" />
-    <Content Include="Static\css\themes\base\jquery-ui.css" />
-    <Content Include="Static\css\themes\base\jquery.ui.accordion.css" />
-    <Content Include="Static\css\themes\base\jquery.ui.all.css" />
-    <Content Include="Static\css\themes\base\jquery.ui.autocomplete.css" />
-    <Content Include="Static\css\themes\base\jquery.ui.base.css" />
-    <Content Include="Static\css\themes\base\jquery.ui.button.css" />
-    <Content Include="Static\css\themes\base\jquery.ui.core.css" />
-    <Content Include="Static\css\themes\base\jquery.ui.datepicker.css" />
-    <Content Include="Static\css\themes\base\jquery.ui.dialog.css" />
-    <Content Include="Static\css\themes\base\jquery.ui.progressbar.css" />
-    <Content Include="Static\css\themes\base\jquery.ui.resizable.css" />
-    <Content Include="Static\css\themes\base\jquery.ui.selectable.css" />
-    <Content Include="Static\css\themes\base\jquery.ui.slider.css" />
-    <Content Include="Static\css\themes\base\jquery.ui.tabs.css" />
-    <Content Include="Static\css\themes\base\jquery.ui.theme.css" />
-    <Content Include="Static\css\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
-    <Content Include="Static\css\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
-    <Content Include="Static\css\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
-    <Content Include="Static\css\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
-    <Content Include="Static\css\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
-    <Content Include="Static\css\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
-    <Content Include="Static\css\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
-    <Content Include="Static\css\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
-    <Content Include="Static\css\themes\base\minified\images\ui-icons_222222_256x240.png" />
-    <Content Include="Static\css\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
-    <Content Include="Static\css\themes\base\minified\images\ui-icons_454545_256x240.png" />
-    <Content Include="Static\css\themes\base\minified\images\ui-icons_888888_256x240.png" />
-    <Content Include="Static\css\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
-    <Content Include="Static\css\themes\base\minified\jquery-ui.min.css" />
-    <Content Include="Static\css\themes\base\minified\jquery.ui.accordion.min.css" />
-    <Content Include="Static\css\themes\base\minified\jquery.ui.autocomplete.min.css" />
-    <Content Include="Static\css\themes\base\minified\jquery.ui.button.min.css" />
-    <Content Include="Static\css\themes\base\minified\jquery.ui.core.min.css" />
-    <Content Include="Static\css\themes\base\minified\jquery.ui.datepicker.min.css" />
-    <Content Include="Static\css\themes\base\minified\jquery.ui.dialog.min.css" />
-    <Content Include="Static\css\themes\base\minified\jquery.ui.progressbar.min.css" />
-    <Content Include="Static\css\themes\base\minified\jquery.ui.resizable.min.css" />
-    <Content Include="Static\css\themes\base\minified\jquery.ui.selectable.min.css" />
-    <Content Include="Static\css\themes\base\minified\jquery.ui.slider.min.css" />
-    <Content Include="Static\css\themes\base\minified\jquery.ui.tabs.min.css" />
-    <Content Include="Static\css\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="ApplicationInsights.config">
@@ -312,6 +258,27 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Static\css\bootstrap-datetimepicker.min.css" />
+    <Content Include="Static\css\bootstrap-theme.min.css" />
+    <Content Include="Static\css\bootstrap.css" />
+    <Content Include="Static\css\bootstrap.min.css" />
+    <Content Include="Static\css\Debugger.css" />
+    <Content Include="Static\css\font-awesome.min.css" />
+    <Content Include="Static\css\jquery\jquery-ui.css" />
+    <Content Include="Static\css\jquery\jquery.ui.accordion.css" />
+    <Content Include="Static\css\jquery\jquery.ui.all.css" />
+    <Content Include="Static\css\jquery\jquery.ui.autocomplete.css" />
+    <Content Include="Static\css\jquery\jquery.ui.base.css" />
+    <Content Include="Static\css\jquery\jquery.ui.button.css" />
+    <Content Include="Static\css\jquery\jquery.ui.core.css" />
+    <Content Include="Static\css\jquery\jquery.ui.datepicker.css" />
+    <Content Include="Static\css\jquery\jquery.ui.dialog.css" />
+    <Content Include="Static\css\jquery\jquery.ui.progressbar.css" />
+    <Content Include="Static\css\jquery\jquery.ui.resizable.css" />
+    <Content Include="Static\css\jquery\jquery.ui.selectable.css" />
+    <Content Include="Static\css\jquery\jquery.ui.slider.css" />
+    <Content Include="Static\css\jquery\jquery.ui.tabs.css" />
+    <Content Include="Static\css\jquery\jquery.ui.theme.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -319,7 +286,6 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Static\css\Site.css" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Static\Images\accent.png" />
     <Content Include="Static\Images\bullet.png" />
@@ -362,6 +328,7 @@
     <Content Include="Views\Shared\_LayoutModalSearch.cshtml" />
     <Content Include="Views\Shared\_LayoutPopover.cshtml" />
     <Content Include="Views\Shared\_StatusMessages.cshtml" />
+    <Content Include="Static\css\Styles.less" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

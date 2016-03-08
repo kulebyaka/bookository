@@ -22,6 +22,10 @@ namespace BookProgress.Web.Models
         public List<Tag> Tags;
     }
 
+    public class Tag
+    {
+    }
+
     public enum Status
     {
         Reeding = 0,
