@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace Tasker.Web.Controllers
+namespace BookProgress.Web.Controllers
 {
     public class HomeController : Controller
     {

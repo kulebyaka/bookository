@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Microsoft.Web.WebPages.OAuth;
-using Tasker.Web.Models;
+using BookProgress.Web.Models;
 
-namespace Tasker.Web
+namespace BookProgress.Web
 {
     public static class AuthConfig
     {

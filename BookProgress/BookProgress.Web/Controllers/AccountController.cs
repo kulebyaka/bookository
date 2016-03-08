@@ -5,13 +5,13 @@ using System.Transactions;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
+using BookProgress.Web.Filters;
+using BookProgress.Web.Models;
 using DotNetOpenAuth.AspNet;
 using Microsoft.Web.WebPages.OAuth;
 using WebMatrix.WebData;
-using Tasker.Web.Filters;
-using Tasker.Web.Models;
 
-namespace Tasker.Web.Controllers
+namespace BookProgress.Web.Controllers
 {
     [Authorize]
     [InitializeSimpleMembership]

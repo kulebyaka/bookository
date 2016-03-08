@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI.WebControls;
 
-namespace Tasker.Web.Models
+namespace BookProgress.Web.Models
 {
     public class Book
     {

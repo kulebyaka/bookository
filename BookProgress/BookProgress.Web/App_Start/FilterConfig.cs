@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Mvc;
 
-namespace Tasker.Web
+namespace BookProgress.Web
 {
     public class FilterConfig
     {

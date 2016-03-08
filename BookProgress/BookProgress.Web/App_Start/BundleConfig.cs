@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Optimization;
 
-namespace Tasker.Web
+namespace BookProgress.Web
 {
     public class BundleConfig
     {
