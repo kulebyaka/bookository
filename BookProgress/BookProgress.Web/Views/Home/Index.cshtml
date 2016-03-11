@@ -1,7 +1,12 @@
-﻿@{
+﻿@using BookProgress.Web.Helpers
+@using BookProgress.Web.Helpers.Utils
+@{
     ViewBag.Title = "Home Page";
 }
-@section featured {
+@{
+    Layout = "~/Views/Shared/_LayoutCustomerEntity.cshtml";
+}
+@*@section featured {
     <section class="featured">
         <div class="content-wrapper">
             <hgroup class="title">
@@ -17,7 +22,7 @@
             </p>
         </div>
     </section>
-}
+}*@
 <h3>We suggest the following:</h3>
 <ol class="round">
     <li class="one">
@@ -43,3 +48,7 @@
         <a href="http://go.microsoft.com/fwlink/?LinkId=245157">Learn more…</a>
     </li>
 </ol>
+
+@section FormTitle {
+    <img src="@Url.Content("~/Static/images/bullet.png")" /> Legal Entity Details
+}

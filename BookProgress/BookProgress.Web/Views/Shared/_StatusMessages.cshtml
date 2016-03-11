@@ -2,9 +2,9 @@
 @if (HttpContext.Current.Session["statusMessages"] != null)
 {
     <div class="bb-alerts">
-        @foreach (var message in (IEnumerable<>)HttpContext.Current.Session["statusMessages"])
+        @foreach (var message in (IEnumerable<string>)HttpContext.Current.Session["statusMessages"])
         {
-            var contextualClass = "success";
+            @*var contextualClass = "success";
             if (message.Status == ResponseHeaderMessageStatus.Error)
             {
                 contextualClass = "danger";
@@ -18,7 +18,8 @@
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
-            </div>
+            </div>*@
+            <strong>ErrorMessage</strong>
         }
 
         @{

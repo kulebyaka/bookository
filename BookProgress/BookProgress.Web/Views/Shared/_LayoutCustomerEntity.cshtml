@@ -1,5 +1,7 @@
-﻿@{
-    ViewBag.Title = "Customer";
+﻿@using BookProgress.Web.Helpers
+@using BookProgress.Web.Helpers.Utils
+@{
+    ViewBag.Title = "Book";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -77,7 +79,7 @@
         <div class="col-md-3">
             @if (true) // todo: only for already saved customers
             {
-                @RenderPage("_CustomerRightPanel.cshtml")
+               // @RenderPage("_CustomerRightPanel.cshtml")
             }
         </div>
     </div>

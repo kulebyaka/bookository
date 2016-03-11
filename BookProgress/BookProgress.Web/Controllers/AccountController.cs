@@ -66,6 +66,18 @@ namespace BookProgress.Web.Controllers
             return View();
         }
 
+
+        [AllowAnonymous]
+        public ActionResult List()
+        {
+            using (UsersContext db = new UsersContext())
+            {
+                //var userProfiles = db.UserProfiles.Where(a=>true);
+                var userProfiles = new List<UserProfile>(){new UserProfile() {ContactType = "lalala", UserName = "Azza", Email = "aa@aa.com", UserId = 1}};
+                return View("List", userProfiles.ToList());
+            }
+        }
+
         //
         // POST: /Account/Register
 

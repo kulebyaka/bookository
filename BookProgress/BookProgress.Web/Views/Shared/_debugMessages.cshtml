@@ -5,7 +5,7 @@
             <span class="glyphicon glyphicon-chevron-right"></span>
         </div>
         <div class="bb-messages-debugger-content" style="display: none;">
-            @foreach (var sentMessage in (IEnumerable<>)HttpContext.Current.Session["debugMessages"])
+            @*@foreach (var sentMessage in (IEnumerable<>)HttpContext.Current.Session["debugMessages"])
             {
                     <div class="bb-message-action">@sentMessage.Action (@(sentMessage.ResponsedOn.Subtract(sentMessage.RequestedOn).Milliseconds)ms)</div>
                     <div style="display: none">
@@ -14,7 +14,7 @@
                         <h5>Response</h5>
                         <pre class="bb-message-body bb-message-body-response">@sentMessage.ResponseContent</pre>
                     </div>
-            }
+            }*@
 
             @{
                 HttpContext.Current.Session["debugMessages"] = null; //reset list of messages for future requests

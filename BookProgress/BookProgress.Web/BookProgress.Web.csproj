@@ -208,6 +208,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\BookController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
@@ -241,80 +242,33 @@
     <Content Include="Static\css\bootstrap.min.css" />
     <Content Include="Static\css\Debugger.css" />
     <Content Include="Static\css\font-awesome.min.css" />
-    <Content Include="Static\css\jquery\images\ui-bg_flat_0_aaaaaa_40x100.png" />
-    <Content Include="Static\css\jquery\images\ui-bg_flat_75_ffffff_40x100.png" />
-    <Content Include="Static\css\jquery\images\ui-bg_glass_55_fbf9ee_1x400.png" />
-    <Content Include="Static\css\jquery\images\ui-bg_glass_65_ffffff_1x400.png" />
-    <Content Include="Static\css\jquery\images\ui-bg_glass_75_dadada_1x400.png" />
-    <Content Include="Static\css\jquery\images\ui-bg_glass_75_e6e6e6_1x400.png" />
-    <Content Include="Static\css\jquery\images\ui-bg_glass_95_fef1ec_1x400.png" />
-    <Content Include="Static\css\jquery\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
-    <Content Include="Static\css\jquery\images\ui-icons_222222_256x240.png" />
-    <Content Include="Static\css\jquery\images\ui-icons_2e83ff_256x240.png" />
-    <Content Include="Static\css\jquery\images\ui-icons_454545_256x240.png" />
-    <Content Include="Static\css\jquery\images\ui-icons_888888_256x240.png" />
-    <Content Include="Static\css\jquery\images\ui-icons_cd0a0a_256x240.png" />
-    <Content Include="Static\css\jquery\jquery-ui.css" />
-    <Content Include="Static\css\jquery\jquery.ui.accordion.css" />
-    <Content Include="Static\css\jquery\jquery.ui.all.css" />
-    <Content Include="Static\css\jquery\jquery.ui.autocomplete.css" />
-    <Content Include="Static\css\jquery\jquery.ui.base.css" />
-    <Content Include="Static\css\jquery\jquery.ui.button.css" />
-    <Content Include="Static\css\jquery\jquery.ui.core.css" />
-    <Content Include="Static\css\jquery\jquery.ui.datepicker.css" />
-    <Content Include="Static\css\jquery\jquery.ui.dialog.css" />
-    <Content Include="Static\css\jquery\jquery.ui.progressbar.css" />
-    <Content Include="Static\css\jquery\jquery.ui.resizable.css" />
-    <Content Include="Static\css\jquery\jquery.ui.selectable.css" />
-    <Content Include="Static\css\jquery\jquery.ui.slider.css" />
-    <Content Include="Static\css\jquery\jquery.ui.tabs.css" />
-    <Content Include="Static\css\jquery\jquery.ui.theme.css" />
-    <Content Include="Static\css\jquery\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
-    <Content Include="Static\css\jquery\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
-    <Content Include="Static\css\jquery\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
-    <Content Include="Static\css\jquery\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
-    <Content Include="Static\css\jquery\minified\images\ui-bg_glass_75_dadada_1x400.png" />
-    <Content Include="Static\css\jquery\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
-    <Content Include="Static\css\jquery\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
-    <Content Include="Static\css\jquery\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
-    <Content Include="Static\css\jquery\minified\images\ui-icons_222222_256x240.png" />
-    <Content Include="Static\css\jquery\minified\images\ui-icons_2e83ff_256x240.png" />
-    <Content Include="Static\css\jquery\minified\images\ui-icons_454545_256x240.png" />
-    <Content Include="Static\css\jquery\minified\images\ui-icons_888888_256x240.png" />
-    <Content Include="Static\css\jquery\minified\images\ui-icons_cd0a0a_256x240.png" />
-    <Content Include="Static\css\jquery\minified\jquery-ui.min.css" />
-    <Content Include="Static\css\jquery\minified\jquery.ui.accordion.min.css" />
-    <Content Include="Static\css\jquery\minified\jquery.ui.autocomplete.min.css" />
-    <Content Include="Static\css\jquery\minified\jquery.ui.button.min.css" />
-    <Content Include="Static\css\jquery\minified\jquery.ui.core.min.css" />
-    <Content Include="Static\css\jquery\minified\jquery.ui.datepicker.min.css" />
-    <Content Include="Static\css\jquery\minified\jquery.ui.dialog.min.css" />
-    <Content Include="Static\css\jquery\minified\jquery.ui.progressbar.min.css" />
-    <Content Include="Static\css\jquery\minified\jquery.ui.resizable.min.css" />
-    <Content Include="Static\css\jquery\minified\jquery.ui.selectable.min.css" />
-    <Content Include="Static\css\jquery\minified\jquery.ui.slider.min.css" />
-    <Content Include="Static\css\jquery\minified\jquery.ui.tabs.min.css" />
-    <Content Include="Static\css\jquery\minified\jquery.ui.theme.min.css" />
-    <Content Include="Static\js\ai.0.22.6-build00108.js" />
-    <Content Include="Static\js\ai.0.22.6-build00108.min.js" />
+    <Content Include="Static\css\Site.css" />
+    <Content Include="Static\fonts\fontawesome-webfont.svg" />
+    <Content Include="Static\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Static\img\ajax-loader.gif" />
+    <Content Include="Static\img\book-5.png" />
+    <Content Include="Static\img\book.png" />
+    <Content Include="Static\img\flag-nation-country-russia-128.png" />
+    <Content Include="Static\img\french-flag.jpg" />
+    <Content Include="Static\img\icons\account.png" />
+    <Content Include="Static\img\icons\add.png" />
+    <Content Include="Static\img\icons\glyphicons-halflings-white.png" />
+    <Content Include="Static\img\icons\glyphicons-halflings.png" />
+    <Content Include="Static\img\icons\legal-entity.png" />
+    <Content Include="Static\img\icons\profiles.png" />
+    <Content Include="Static\img\toolbar_bg.png" />
     <Content Include="Static\js\bootstrap-datetimepicker.min.js" />
     <Content Include="Static\js\bootstrap.js" />
     <Content Include="Static\js\bootstrap.min.js" />
     <Content Include="Static\js\common.js" />
-    <None Include="Static\js\jquery-1.8.2.intellisense.js" />
-    <Content Include="Static\js\jquery-1.8.2.js" />
-    <Content Include="Static\js\jquery-1.8.2.min.js" />
-    <Content Include="Static\js\jquery-ui-1.8.24.js" />
-    <Content Include="Static\js\jquery-ui-1.8.24.min.js" />
-    <Content Include="Static\js\jquery.unobtrusive-ajax.js" />
-    <Content Include="Static\js\jquery.unobtrusive-ajax.min.js" />
+    <None Include="Static\js\jquery-1.10.2.intellisense.js" />
+    <Content Include="Static\js\jquery-1.10.2.js" />
+    <Content Include="Static\js\jquery-1.10.2.min.js" />
     <None Include="Static\js\jquery.validate-vsdoc.js" />
     <Content Include="Static\js\jquery.validate.js" />
     <Content Include="Static\js\jquery.validate.min.js" />
     <Content Include="Static\js\jquery.validate.unobtrusive.js" />
     <Content Include="Static\js\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Static\js\knockout-2.2.0.debug.js" />
-    <Content Include="Static\js\knockout-2.2.0.js" />
     <Content Include="Static\js\modernizr-2.6.2.js" />
     <Content Include="Static\js\respond.js" />
     <Content Include="Static\js\respond.min.js" />
@@ -326,19 +280,6 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Static\Images\accent.png" />
-    <Content Include="Static\Images\bullet.png" />
-    <Content Include="Static\Images\heroAccent.png" />
-    <Content Include="Static\Images\orderedList0.png" />
-    <Content Include="Static\Images\orderedList1.png" />
-    <Content Include="Static\Images\orderedList2.png" />
-    <Content Include="Static\Images\orderedList3.png" />
-    <Content Include="Static\Images\orderedList4.png" />
-    <Content Include="Static\Images\orderedList5.png" />
-    <Content Include="Static\Images\orderedList6.png" />
-    <Content Include="Static\Images\orderedList7.png" />
-    <Content Include="Static\Images\orderedList8.png" />
-    <Content Include="Static\Images\orderedList9.png" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
@@ -367,14 +308,24 @@
     <Content Include="Views\Shared\_LayoutModalSearch.cshtml" />
     <Content Include="Views\Shared\_LayoutPopover.cshtml" />
     <Content Include="Views\Shared\_StatusMessages.cshtml" />
-    <Content Include="Static\css\Styles.less" />
+    <Content Include="Views\Account\List.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Static\img\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Static\fonts\fontawesome-webfont.eot" />
+    <Content Include="Static\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Static\fonts\fontawesome-webfont.woff" />
+    <Content Include="Static\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Static\fonts\FontAwesome.otf" />
+    <Content Include="Static\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Static\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Static\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Static\js\jquery-1.10.2.min.map" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

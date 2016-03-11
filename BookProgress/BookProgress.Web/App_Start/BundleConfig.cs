@@ -29,9 +29,7 @@ namespace BookProgress.Web
             bundles.Add(new ScriptBundle("~/bundles/custom").Include(
                       "~/Static/js/common.js"));
 
-            bundles.Add(new StyleBundle("~/Static/css").Include("~/Static/site.css"));
-
-            bundles.Add(new StyleBundle("~/Content/css").Include(
+            bundles.Add(new StyleBundle("~/Static/css").Include(
                         "~/Static/css/font-awesome.min.css",
                         "~/Static/css/bootstrap.css",
                         "~/Static/css/bootstrap.min.css",

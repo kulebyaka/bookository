@@ -1,4 +1,6 @@
-﻿@{ var account = (StructuredAccountForm)ViewBag.AccountStructure; }
+﻿@using BookProgress.Web.Helpers
+@using BookProgress.Web.Helpers.Utils
+@{ var account = (StructuredAccountForm)ViewBag.AccountStructure; }
 
 @helper Box(string iconUrl, string title, Func<object, object> body)
 {
