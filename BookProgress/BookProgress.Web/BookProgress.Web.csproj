@@ -227,7 +227,7 @@
     <Compile Include="Helpers\Utils\ButtonType.cs" />
     <Compile Include="Helpers\Utils\SearchType.cs" />
     <Compile Include="Models\AccountModels.cs" />
-    <Compile Include="Models\Book.cs" />
+    <Compile Include="Models\BookDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

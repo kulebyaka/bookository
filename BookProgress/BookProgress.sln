@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookProgress.Web", "BookPro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestWebProject", "TestWebProject\TestWebProject.csproj", "{3972102C-92F6-4100-830F-30268D4362EC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utils", "Utils\Utils.csproj", "{8EB45C93-07EA-42CC-8CCC-0FCC9D62536B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{FCC41564-D847-4A7D-8A15-E906B0CB4D58}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{3972102C-92F6-4100-830F-30268D4362EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3972102C-92F6-4100-830F-30268D4362EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3972102C-92F6-4100-830F-30268D4362EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EB45C93-07EA-42CC-8CCC-0FCC9D62536B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EB45C93-07EA-42CC-8CCC-0FCC9D62536B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EB45C93-07EA-42CC-8CCC-0FCC9D62536B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EB45C93-07EA-42CC-8CCC-0FCC9D62536B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCC41564-D847-4A7D-8A15-E906B0CB4D58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCC41564-D847-4A7D-8A15-E906B0CB4D58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCC41564-D847-4A7D-8A15-E906B0CB4D58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCC41564-D847-4A7D-8A15-E906B0CB4D58}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

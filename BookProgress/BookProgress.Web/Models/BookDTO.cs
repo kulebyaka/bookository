@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace BookProgress.Web.Models
 {
-    public class Book
+    public class BookDto
     {
         [Key]
         public Guid Id { get; set; }

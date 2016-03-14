@@ -14,6 +14,6 @@ namespace TestWebProject.Models
         {
         }
 
-        public DbSet<Book> BookItems { get; set; }
+        public DbSet<BookDto> BookItems { get; set; }
     }
 }
