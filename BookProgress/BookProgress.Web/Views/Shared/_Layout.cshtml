@@ -48,7 +48,6 @@
 <nav id="default-navbar" class="navbar navbar-default">
     <div class="container-fluid">
         <div class="navbar-header">
-
             <a class="navbar-brand" href="#">
                 <span><img src="~/Static/img/book.png" /></span>
                 @if (ViewBag.Title != null)
@@ -56,11 +55,10 @@
                     @ViewBag.Title
                 }
             </a>
-
-
-
-</div>
+        </div>
         <div class="collapse navbar-collapse navbar-right">
+
+
 
             <form class="navbar-form navbar-left" role="search">
                 <div class="form-group">
@@ -70,9 +68,25 @@
             </form>
 
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-                
-                <li><a href="@Url.Action("LogOff", "Account")">&nbsp;Logout</a></li>
+                <li class="active">
+                    <a href="#">ToRead</a>
+                </li>
+
+                <li class="active">
+                    <a href="#">Readed</a>
+                </li>
+
+                <li class="active">
+                    <a href="#"><span class="sr-only">InProgress</span></a>
+                </li>
+
+                <li class="active">
+                    <a href="#">Link <span class="sr-only">(current)</span></a>
+                </li>
+
+                <li>
+                    <a href="@Url.Action("LogOff", "Account")">&nbsp;Logout</a>
+                </li>
             </ul>
 
         </div>

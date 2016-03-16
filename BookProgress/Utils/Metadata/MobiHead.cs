@@ -48,81 +48,85 @@ namespace Utils.Metadata
 
         public MobiHead(FileStream fs, uint mobiHeaderSize)
         {
-
-            fs.Read(this.identifier, 0, this.identifier.Length);
-
-            if (this.IdentifierAsString != "MOBI")
+            using (StreamReader sr = new StreamReader(fs))
             {
-                throw new IOException("Did not get expected MOBI identifier");
-            }
+                var enc = sr.CurrentEncoding;
+            
+                fs.Read(this.identifier, 0, this.identifier.Length);
 
-            fs.Read(this.headerLength, 0, this.headerLength.Length);
-            this.restOfMobiHeader = new byte[this.HeaderLength + 16 - 132];
-
-            fs.Read(this.mobiType, 0, this.mobiType.Length);
-            fs.Read(this.textEncoding, 0, this.textEncoding.Length);
-            fs.Read(this.uniqueID, 0, this.uniqueID.Length);
-            fs.Read(this.fileVersion, 0, this.fileVersion.Length);
-            fs.Read(this.orthographicIndex, 0, this.orthographicIndex.Length);
-            fs.Read(this.inflectionIndex, 0, this.inflectionIndex.Length);
-            fs.Read(this.indexNames, 0, this.indexNames.Length);
-            fs.Read(this.indexKeys, 0, this.indexKeys.Length);
-            fs.Read(this.extraIndex0, 0, this.extraIndex0.Length);
-            fs.Read(this.extraIndex1, 0, this.extraIndex1.Length);
-            fs.Read(this.extraIndex2, 0, this.extraIndex2.Length);
-            fs.Read(this.extraIndex3, 0, this.extraIndex3.Length);
-            fs.Read(this.extraIndex4, 0, this.extraIndex4.Length);
-            fs.Read(this.extraIndex5, 0, this.extraIndex5.Length);
-            fs.Read(this.firstNonBookIndex, 0, this.firstNonBookIndex.Length);
-            fs.Read(this.fullNameOffset, 0, this.fullNameOffset.Length);
-            fs.Read(this.fullNameLength, 0, this.fullNameLength.Length);
-
-            int fullNameLen = Converter.ToInt32(this.fullNameLength);
-            fs.Read(this.locale, 0, this.locale.Length);
-            fs.Read(this.inputLanguage, 0, this.inputLanguage.Length);
-            fs.Read(this.outputLanguage, 0, this.outputLanguage.Length);
-            fs.Read(this.minVersion, 0, this.minVersion.Length);
-            fs.Read(this.firstImageIndex, 0, this.firstImageIndex.Length);
-            fs.Read(this.huffmanRecordOffset, 0, this.huffmanRecordOffset.Length);
-            fs.Read(this.huffmanRecordCount, 0, this.huffmanRecordCount.Length);
-            fs.Read(this.huffmanTableOffset, 0, this.huffmanTableOffset.Length);
-            fs.Read(this.huffmanTableLength, 0, this.huffmanTableLength.Length);
-            fs.Read(this.exthFlags, 0, this.exthFlags.Length);
-
-            //If bit 6 (0x40) is set, then there's an EXTH record 
-            bool exthExists = (Converter.ToUInt32(this.exthFlags) & 0x40) != 0;
-
-            fs.Read(this.restOfMobiHeader, 0, this.restOfMobiHeader.Length);
-
-            if (exthExists)
-            {
-                this.exthHeader = new EXTHHead(fs);
-            }
-
-            int currentOffset = 132 + this.restOfMobiHeader.Length + ExthHeaderSize;
-            this.remainder = new byte[(int)(mobiHeaderSize - currentOffset)];
-            fs.Read(this.remainder, 0, this.remainder.Length);
-
-            int fullNameIndexInRemainder = Converter.ToInt32(this.fullNameOffset) - currentOffset;
-
-            this.fullName = new byte[fullNameLen];
-
-            if (fullNameIndexInRemainder >= 0)
-            {
-              if (fullNameIndexInRemainder < this.remainder.Length)
-              {
-                if (fullNameIndexInRemainder + fullNameLen <= this.remainder.Length)
+                if (this.IdentifierAsString != "MOBI")
                 {
-                  if (fullNameLen > 0)
+                    throw new IOException("Did not get expected MOBI identifier");
+                }
+
+                fs.Read(this.headerLength, 0, this.headerLength.Length);
+                this.restOfMobiHeader = new byte[this.HeaderLength + 16 - 132];
+
+                fs.Read(this.mobiType, 0, this.mobiType.Length);
+                fs.Read(this.textEncoding, 0, this.textEncoding.Length);
+                fs.Read(this.uniqueID, 0, this.uniqueID.Length);
+                fs.Read(this.fileVersion, 0, this.fileVersion.Length);
+                fs.Read(this.orthographicIndex, 0, this.orthographicIndex.Length);
+                fs.Read(this.inflectionIndex, 0, this.inflectionIndex.Length);
+                fs.Read(this.indexNames, 0, this.indexNames.Length);
+                fs.Read(this.indexKeys, 0, this.indexKeys.Length);
+                fs.Read(this.extraIndex0, 0, this.extraIndex0.Length);
+                fs.Read(this.extraIndex1, 0, this.extraIndex1.Length);
+                fs.Read(this.extraIndex2, 0, this.extraIndex2.Length);
+                fs.Read(this.extraIndex3, 0, this.extraIndex3.Length);
+                fs.Read(this.extraIndex4, 0, this.extraIndex4.Length);
+                fs.Read(this.extraIndex5, 0, this.extraIndex5.Length);
+                fs.Read(this.firstNonBookIndex, 0, this.firstNonBookIndex.Length);
+                fs.Read(this.fullNameOffset, 0, this.fullNameOffset.Length);
+                fs.Read(this.fullNameLength, 0, this.fullNameLength.Length);
+
+                int fullNameLen = Converter.ToInt32(this.fullNameLength);
+                fs.Read(this.locale, 0, this.locale.Length);
+                fs.Read(this.inputLanguage, 0, this.inputLanguage.Length);
+                fs.Read(this.outputLanguage, 0, this.outputLanguage.Length);
+                fs.Read(this.minVersion, 0, this.minVersion.Length);
+                fs.Read(this.firstImageIndex, 0, this.firstImageIndex.Length);
+                fs.Read(this.huffmanRecordOffset, 0, this.huffmanRecordOffset.Length);
+                fs.Read(this.huffmanRecordCount, 0, this.huffmanRecordCount.Length);
+                fs.Read(this.huffmanTableOffset, 0, this.huffmanTableOffset.Length);
+                fs.Read(this.huffmanTableLength, 0, this.huffmanTableLength.Length);
+                fs.Read(this.exthFlags, 0, this.exthFlags.Length);
+
+                //If bit 6 (0x40) is set, then there's an EXTH record 
+                bool exthExists = (Converter.ToUInt32(this.exthFlags) & 0x40) != 0;
+
+                fs.Read(this.restOfMobiHeader, 0, this.restOfMobiHeader.Length);
+
+                if (exthExists)
+                {
+                    this.exthHeader = new EXTHHead(fs);
+                }
+
+                int currentOffset = 132 + this.restOfMobiHeader.Length + ExthHeaderSize;
+                this.remainder = new byte[(int)(mobiHeaderSize - currentOffset)];
+                fs.Read(this.remainder, 0, this.remainder.Length);
+
+                int fullNameIndexInRemainder = Converter.ToInt32(this.fullNameOffset) - currentOffset;
+
+                this.fullName = new byte[fullNameLen];
+
+                if (fullNameIndexInRemainder >= 0)
+                {
+                  if (fullNameIndexInRemainder < this.remainder.Length)
                   {
-                      Array.Copy(this.remainder, 
-                      fullNameIndexInRemainder, 
-                      this.fullName, 
-                      0, 
-                      fullNameLen);
+                    if (fullNameIndexInRemainder + fullNameLen <= this.remainder.Length)
+                    {
+                      if (fullNameLen > 0)
+                      {
+                          Array.Copy(this.remainder, 
+                          fullNameIndexInRemainder, 
+                          this.fullName, 
+                          0, 
+                          fullNameLen);
+                      }
+                    }
                   }
                 }
-              }
             }
 
             PopulateFieldList();
@@ -144,10 +148,16 @@ namespace Utils.Metadata
             }
 
         }
-
+        
         public string FullName
         {
-            get { return Encoding.ASCII.GetString(this.remainder).Replace("\0", String.Empty); }
+            get
+            {
+                return Encoding == Encoding.UTF8
+                    ? Encoding.UTF8.GetString(this.remainder).Replace("\0", String.Empty)
+                    : Encoding.ASCII.GetString(this.remainder).Replace("\0", String.Empty);
+                //TODO: Extract it in base method "GetEncodedString" or write uor class Encoding 
+            }
         }
 
         public string IdentifierAsString

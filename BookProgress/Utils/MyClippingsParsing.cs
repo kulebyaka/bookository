@@ -20,14 +20,10 @@ namespace Utils
 
         public static Bookmark GetBookmark(string myClippings)
         {
-            Regex regex = new Regex(@"(?<Title>[a-zA-Z0-9_ ]*)(?<Author>\([a-zA-Z0-9_ ]*\))(\n|\r|\r\n)(.+)(\n|\r|\r\n)(\n|\r|\r\n)(?<Bookmark>.+)");
-            var matches = regex.Matches(myClippings);
-            foreach (var match in matches)
-            {
-                var x = match;
-            }
-            //TODO: http://stackoverflow.com/questions/16947390/using-regex-to-parse-kindle-my-clippings-txt-file
-            return null;
+            Regex regex = new Regex(@"(?<Title>.+)(?<Author>\(.+\))(\n|\r|\r\n)(.+)(\n|\r|\r\n)(\n|\r|\r\n)(?<Bookmark>[\s\S]*)");
+            //Regex(@"(?<Title>[a-zA-Z0-9_ ]*)(?<Author>\([a-zA-Z0-9_ ]*\))(\n|\r|\r\n)(.+)(\n|\r|\r\n)(\n|\r|\r\n)(?<Bookmark>.+)"); 
+            var match = regex.Match(myClippings);
+            return new Bookmark() {BookTitle = match.Groups["Title"].Value, Value = match.Groups["Bookmark"].Value};
         }
     }
 }

@@ -15,22 +15,26 @@ namespace Utils
 
         static void Main(string[] args)
         {
-            //Console.WriteLine(GetMetadata());
-            Console.WriteLine(GetHighlights());
+            Console.WriteLine(GetMetadata());
+            //Console.WriteLine(GetHighlights());
             Console.ReadLine();
+
+            object o = Encoding.Unicode.CodePage; 
+            Encoding enc = Encoding.GetEncoding(int.Parse(o.ToString()));
         }
 
         private static string GetMetadata()
         {
-            MobiMetadata mobi = new MobiMetadata(@"C:\Users\Kirill\Downloads\Ellis_Pravila-seksa.222273.fb2.mobi");
+            MobiMetadata mobi = new MobiMetadata(@"C:\Users\Kirill\Downloads\Dikson_Plenennaya-Vselennaya-avtorskiy-sbornik-.392223.fb2.mobi");
 
             string fileName = mobi.PDBHeader.Name;
             uint fileVersion = mobi.MobiHeader.FileVersion;
+            string fullname = mobi.MobiHeader.FullName;
             string authorName = mobi.MobiHeader.EXTHHeader.Author;
             string updatedTitle = mobi.MobiHeader.EXTHHeader.UpdatedTitle;
             var dontKnow = mobi.MobiHeader.EXTHHeader.fieldListNoBlankRows;
             var anotherField = mobi.PalmDocHeader.ToString();
-            return String.Format("Title = {0}; Author = {1}", fileName, authorName);
+            return String.Format("Title = {0}; Author = {1}", fullname, authorName);
         }
 
         private static string GetHighlights()
@@ -41,7 +45,8 @@ namespace Utils
             {
                 if (string.Equals(EndOfBookmark, line, StringComparison.CurrentCultureIgnoreCase))
                 {
-                    var b = MyClippingsParsing.GetBookmark(clipping.ToString());
+                    bookmarks.Add(MyClippingsParsing.GetBookmark(clipping.ToString()));
+                    clipping.Clear();
                 }
                 else
                 {
@@ -51,7 +56,12 @@ namespace Utils
 
             }
 
-            return String.Format("Book = {0}; Bookmark = {1}", bookmarks.First().BookTitle, bookmarks.First().Value);
+            var returnedString = new StringBuilder();
+            foreach (var bookmark in bookmarks)
+            {
+                returnedString.AppendLine(String.Format("Book = {0}; Bookmark = {1}", bookmark.BookTitle, bookmark.Value));
+            }
+            return returnedString.ToString();
         }
     }
 }

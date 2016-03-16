@@ -12,6 +12,8 @@ namespace Utils.Metadata
 
         private List<string> fieldListExclude = new List<string>() { "FieldList", "FieldListNoBlankRows", "EmptyFieldList", "EXTHHeader" };
 
+        protected Encoding Encoding = Encoding.UTF8;
+
         public SortedDictionary<string, object> FieldList
         {
             get { return this.fieldList; }
