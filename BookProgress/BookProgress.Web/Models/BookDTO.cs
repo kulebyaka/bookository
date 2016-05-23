@@ -18,8 +18,8 @@ namespace BookProgress.Web.Models
         public string ISBN { get; set; }
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:P2}")]
         [Range(0, 100)]
-        public decimal Percentage;
-        public List<string> Tags;
+        public decimal Percentage { get; set; }
+        public List<string> Tags { get; set; }
     }
 
     public enum Status
